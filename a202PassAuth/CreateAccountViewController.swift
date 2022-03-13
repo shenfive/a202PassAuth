@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateAccountViewController: UIViewController {
     @IBOutlet weak var account: UITextField!
@@ -39,6 +40,19 @@ class CreateAccountViewController: UIViewController {
         if pw2 != pw1 {
             showMsg("兩次密碼必需相同")
             return
+        }
+        
+        Auth.auth().createUser(withEmail: theAccount, password: pw1) { result, error in
+            if let error = error{
+                //失敗
+                print("error")
+                self.showMsg(error.localizedDescription)
+                
+            }else{
+                //成玏
+                self.navigationController?.popViewController(animated: true)
+                
+            }
         }
         
         
