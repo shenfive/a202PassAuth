@@ -20,6 +20,9 @@ class CreateAccountViewController: UIViewController {
 
     @IBAction func createAccount(_ sender: Any) {
         let theAccount = account.text ?? ""
+        let pw1 = pw1.text ?? ""
+        let pw2 = pw2.text ?? ""
+        
         if validateEmail(theAccount) == false{
             print("Email 格式不對")
             showMsg("Email 格式不對")
@@ -27,6 +30,19 @@ class CreateAccountViewController: UIViewController {
         }else{
             print("格式對了")
         }
+        
+        if pw1.count < 6 {
+            showMsg("密碼至少 6 礮")
+            return
+        }
+        
+        if pw2 != pw1 {
+            showMsg("兩次密碼必需相同")
+            return
+        }
+        
+        
+        
         
         
     }
