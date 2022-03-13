@@ -9,7 +9,9 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var account: UITextField!
+    
     @IBOutlet weak var statusText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,18 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func signIn(_ sender: Any) {
+        let theAccount = account.text ?? ""
+        let password1 = password.text ?? ""
+        
+        //省略檢查
+        
+        Auth.auth().signIn(withEmail: theAccount, password: password1, completion: nil)
+        
+        
+    }
+    
+    
     @IBAction func logOut(_ sender: Any) {
         do{
             try Auth.auth().signOut()
