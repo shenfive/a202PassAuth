@@ -40,11 +40,24 @@ class ViewController: UIViewController {
         
         //省略檢查
         
-        Auth.auth().signIn(withEmail: theAccount, password: password1, completion: nil)
-        
+        Auth.auth().signIn(withEmail: theAccount, password: password1) { result, error in
+            if let error = error{
+                self.showMsg(error.localizedDescription)
+            }
+        }
         
     }
     
+    @IBAction func forgetPassword(_ sender: Any) {
+        let theAccount = account.text ?? ""
+        Auth.auth().sendPasswordReset(withEmail: theAccount) { error in
+            if let error = error{
+                self.showMsg(error.localizedDescription)
+            }else{
+                self.showMsg("請查看你的 Email 重置密碼")
+            }
+        }
+    }
     
     @IBAction func logOut(_ sender: Any) {
         do{
