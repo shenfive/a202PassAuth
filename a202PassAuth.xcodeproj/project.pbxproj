@@ -16,6 +16,7 @@
 		BAB5772827DDC0BB00BA3F93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB5772727DDC0BB00BA3F93 /* GoogleService-Info.plist */; };
 		BAB5772B27DDC0EC00BA3F93 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BAB5772A27DDC0EC00BA3F93 /* FirebaseAnalytics */; };
 		BAB5772D27DDC0EC00BA3F93 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BAB5772C27DDC0EC00BA3F93 /* FirebaseAuth */; };
+		BAB5772F27DDC97900BA3F93 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5772E27DDC97900BA3F93 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BAB5771F27DDC09C00BA3F93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB5772127DDC09C00BA3F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAB5772727DDC0BB00BA3F93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BAB5772E27DDC97900BA3F93 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				BAB5771C27DDC09C00BA3F93 /* Assets.xcassets */,
 				BAB5771E27DDC09C00BA3F93 /* LaunchScreen.storyboard */,
 				BAB5772127DDC09C00BA3F93 /* Info.plist */,
+				BAB5772E27DDC97900BA3F93 /* CreateAccountViewController.swift */,
 			);
 			path = a202PassAuth;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB5772F27DDC97900BA3F93 /* CreateAccountViewController.swift in Sources */,
 				BAB5771827DDC09C00BA3F93 /* ViewController.swift in Sources */,
 				BAB5771427DDC09C00BA3F93 /* AppDelegate.swift in Sources */,
 				BAB5771627DDC09C00BA3F93 /* SceneDelegate.swift in Sources */,

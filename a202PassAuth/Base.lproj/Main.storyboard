@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="897.10144927536237" y="49.553571428571423"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="87e-NY-Pvd">
             <objects>
-                <viewController id="rhN-Ou-gi8" sceneMemberID="viewController">
+                <viewController id="rhN-Ou-gi8" customClass="CreateAccountViewController" customModule="a202PassAuth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5o4-b8-5OG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,12 +68,20 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="建立帳號"/>
+                                <connections>
+                                    <action selector="createAccount:" destination="rhN-Ou-gi8" eventType="touchUpInside" id="2rO-Y1-COk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xCq-fy-hRS"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="hvk-gw-TyC"/>
+                    <connections>
+                        <outlet property="account" destination="sVU-RE-SWF" id="okO-Rv-vWY"/>
+                        <outlet property="pw1" destination="EeA-EG-5ns" id="fcT-63-wgK"/>
+                        <outlet property="pw2" destination="JrQ-Ow-65v" id="YZx-1Y-DfX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bw-Wv-cqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
