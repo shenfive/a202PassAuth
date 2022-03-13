@@ -22,6 +22,8 @@ class CreateAccountViewController: UIViewController {
         let theAccount = account.text ?? ""
         if validateEmail(theAccount) == false{
             print("Email 格式不對")
+            showMsg("Email 格式不對")
+            return
         }else{
             print("格式對了")
         }
@@ -37,5 +39,15 @@ class CreateAccountViewController: UIViewController {
     }
 }
 
-
+extension UIViewController{
+    
+    func showMsg(_ msg:String){
+        let alert = UIAlertController(title: msg, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "朕知道了",
+                                      style: .default,
+                                      handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+}
 
