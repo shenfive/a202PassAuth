@@ -42,6 +42,7 @@ class CreateAccountViewController: UIViewController {
             return
         }
         
+        //建立帳號
         Auth.auth().createUser(withEmail: theAccount, password: pw1) { result, error in
             if let error = error{
                 //失敗
@@ -55,10 +56,6 @@ class CreateAccountViewController: UIViewController {
             }
         }
         
-        
-        
-        
-        
     }
     
     
@@ -71,6 +68,7 @@ class CreateAccountViewController: UIViewController {
 
 extension UIViewController{
     
+    //顯示訊息
     func showMsg(_ msg:String){
         let alert = UIAlertController(title: msg, message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "朕知道了",
